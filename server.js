@@ -18,7 +18,7 @@ new WebpackDevServer(webpack(config), {
     },
     headers: {"X-Custom-Header": "yes"},
     stats: {colors: true}
-}).listen(3001,function (err, result) {
+}).listen(3001, function (err, result) {
     if (err) console.log(err);
     console.log('Listening at localhost:3001');
 });

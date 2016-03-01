@@ -20,7 +20,8 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new webpack.DefinePlugin({
             'process.env': {
-                'DEBUG': true
+                //'DEBUG': true,
+                NODE_ENV: JSON.stringify("production")
             }
         })
     ],
