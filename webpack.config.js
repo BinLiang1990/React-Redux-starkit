@@ -6,11 +6,16 @@ var webpack = require("webpack");
 
 module.exports = {
     devtool: "eval",
-    entry: [
-        'webpack-dev-server/client?http://192.168.4.110:3001',
-        'webpack/hot/only-dev-server',
-        './src/app.js'
-    ],
+    entry: {
+        app: [
+            './src/app.js'
+        ]
+    },
+    //entry: [
+    //    'webpack-dev-server/client?http://192.168.4.110:3001',
+    //    'webpack/hot/only-dev-server',
+    //    './src/app.js'
+    //],
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'bundle.js',
