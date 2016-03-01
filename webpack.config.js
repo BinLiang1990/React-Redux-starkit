@@ -11,11 +11,6 @@ module.exports = {
             './src/app.js'
         ]
     },
-    //entry: [
-    //    'webpack-dev-server/client?http://192.168.4.110:3001',
-    //    'webpack/hot/only-dev-server',
-    //    './src/app.js'
-    //],
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'bundle.js',
@@ -25,8 +20,7 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new webpack.DefinePlugin({
             'process.env': {
-                //'DEBUG': true,
-                NODE_ENV: JSON.stringify("production")
+                'DEBUG': true
             }
         })
     ],
