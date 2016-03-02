@@ -46,7 +46,7 @@
     "no-undef": 0, //变量未定义
     "no-unused-vars": 0, //变量定义后未使用
     "no-cond-assign": 2, //条件语句中禁止赋值操作
-    "no-native-reassign": 2, //禁止覆盖原生对象
+    "no-native-reassign": 1, //禁止覆盖原生对象
     "no-mixed-spaces-and-tabs": 0,
     //代码风格优化
     "no-irregular-whitespace": 0,

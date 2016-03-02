@@ -5,8 +5,8 @@ var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
 var config = require('./webpack.config');
 config.entry.app.unshift("webpack-dev-server/client?http://192.168.4.110:3001", "webpack/hot/dev-server");
-var compiler = webpack(config);
-new WebpackDevServer(compiler, {
+
+new WebpackDevServer(webpack(config), {
     publicPath: config.output.publicPath,
     hot: true,
     historyApiFallback: true,
