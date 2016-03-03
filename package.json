@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "lint": "eslint src",
-    "prod": "cross-env NODE_ENV=production webpack --config webpack.config.production.js"
+    "prod": "webpack --config webpack.config.production.js"
   },
   "keywords": [
     "react",
@@ -20,7 +20,11 @@
     "intro": "^1.0.0",
     "react": "^0.14.7",
     "react-cookie": "^0.4.5",
-    "react-dom": "^0.14.7"
+    "react-dom": "^0.14.7",
+    "react-redux": "^4.4.0",
+    "redux": "^3.3.1",
+    "redux-logger": "^2.6.1",
+    "redux-thunk": "^1.0.3"
   },
   "devDependencies": {
     "babel-core": "^6.6.0",
@@ -31,6 +35,7 @@
     "eslint-loader": "^1.3.0",
     "eslint-plugin-react": "^4.1.0",
     "react-hot-loader": "^1.3.0",
+    "redux-devtools": "^3.1.1",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
   }
