@@ -2,12 +2,23 @@
  * Created by EdenLiang on 2016/3/4.
  */
 'use strict';
-import {addTodo} from '../constants/ActionType';
+import { ADD_TODO, COMPLETE_TODO, SET_VISIBILITY_FILTER, VisibilityFilters } from '../constants/actionType';
 const todos = (state = [], action) => {
-    switch (action) {
-        case addTodo:
-            return [...state, {text: action.text, complete: false}];
-        default :
+    switch (action.type) {
+        case ADD_TODO:
+            return [...state, {
+                text: action.text,
+                completed: false
+            }];
+        case COMPLETE_TODO:
+            return [
+                ...state.slice(0, action.index),
+                Object.assign({}, state[action.index], {
+                    completed: true
+                }),
+                ...state.slice(action.index + 1)
+            ];
+        default:
             return state;
     }
 };
