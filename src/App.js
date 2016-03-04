@@ -4,30 +4,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux'
-import Counter from './js/components/Counter'
-import rootReducer from './js/reducers/rootReducer'
-import * as ActionType from './js/constants/ActionType'
+import { Provider } from 'react-redux';
+import index from './js/reducers'
+import App from './js/Containers/App'
 
-const store = createStore(rootReducer);
+const store = createStore(index);
 
-function render() {
-    ReactDOM.render(
-        <Counter value={store.getState()} onIncrement={() => store.dispatch({ type: ActionType.increment })}
-                 onDecrement={() => store.dispatch({ type: ActionType.decrement })}
-                 mit={()=>store.dispatch({type: ActionType.mit})}/>,
-        document.getElementById('content')
-    )
-}
+ReactDOM.render(<Provider store={store}>
+    <App />
+</Provider>, document.getElementById('content'));
 
-render();
-store.subscribe(render);
-
-//class MyComponent extends React.Component {
-//    render() {
-//        return <div>hello world1243</div>;
-//    }
-//}
-//ReactDOM.render(<MyComponent />, document.getElementById('content'));
-//
-//
-//export default MyComponent;
