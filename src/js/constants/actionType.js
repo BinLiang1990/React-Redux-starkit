@@ -4,3 +4,4 @@
 'use strict';
 export const increment = "increment";
 export const decrement = "decrement";
+export const mit = "mit";

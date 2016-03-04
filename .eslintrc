@@ -22,7 +22,7 @@
     // "no-inner-declarations": [0, "both"],     //不建议在{}代码块内部声明变量或函数
     "no-extra-boolean-cast": 1, //多余的感叹号转布尔型
     "no-extra-semi": 1, //多余的分号
-    "no-extra-parens": 0, //多余的括号
+    "no-extra-parens": 1, //多余的括号
     "no-empty": 1, //空代码块
     "no-use-before-define": [0, "nofunc"], //使用前未定义
     "complexity": [1, 10], //圈复杂度大于10 警告
@@ -43,7 +43,7 @@
     "no-unexpected-multiline": 2, //行尾缺少分号可能导致一些意外情况
     "no-sparse-arrays": 1, //数组中多出逗号
     "no-shadow-restricted-names": 2, //关键词与命名冲突
-    "no-undef": 0, //变量未定义
+    "no-undef": 1, //变量未定义
     "no-unused-vars": 0, //变量定义后未使用
     "no-cond-assign": 2, //条件语句中禁止赋值操作
     "no-native-reassign": 1, //禁止覆盖原生对象
@@ -77,11 +77,11 @@
       "allowShortCircuit": true,
       "allowTernary": true
     }], //不执行的表达式
-    "no-useless-call": 1, //无意义的函数call或apply
-    "no-useless-concat": 1, //无意义的string concat
+    "no-useless-call": 0, //无意义的函数call或apply
+    "no-useless-concat": 0, //无意义的string concat
     "no-void": 1, //禁用void
     "no-with": 1, //禁用with
-    "space-infix-ops": 0, //操作符前后空格
+    "space-infix-ops": 1, //操作符前后空格
     "valid-jsdoc": [0, {
       "requireParamDescription": true,
       "requireReturnDescription": true

@@ -5,21 +5,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux'
 import Counter from './js/components/Counter'
-import counter from './js/reducers/CounterReducer'
+import rootReducer from './js/reducers/rootReducer'
 import * as ActionType from './js/constants/ActionType'
 
-const store = createStore(counter);
+const store = createStore(rootReducer);
 
 function render() {
     ReactDOM.render(
         <Counter value={store.getState()} onIncrement={() => store.dispatch({ type: ActionType.increment })}
-                 onDecrement={() => store.dispatch({ type: ActionType.decrement })}/>,
+                 onDecrement={() => store.dispatch({ type: ActionType.decrement })}
+                 mit={()=>store.dispatch({type: ActionType.mit})}/>,
         document.getElementById('content')
     )
 }
 
-render()
-store.subscribe(render)
+render();
+store.subscribe(render);
 
 //class MyComponent extends React.Component {
 //    render() {

@@ -23,10 +23,12 @@ module.exports = {
     //    extensions: ['', '.js', '.jsx']
     //},
     module: {
+        //不知道为什么这里用preLoaders不行，但是改成放在loaders中，先加载eslint可以，迷
         //preLoaders: [
         //    {test: [/\.js$/, /\.jsx$/], loader: "eslint-loader", exclude: /node_modules/}
         //],
         loaders: [
+            {test: [/\.js$/, /\.jsx$/], loader: "eslint-loader", exclude: /node_modules/},
             {test: /\.jsx?$/, loader: "babel-loader", exclude: /node_modules/},
             {test: /\.js?$/, loaders: ['react-hot', 'babel'], include: [path.join(__dirname, 'src')]}
         ]
