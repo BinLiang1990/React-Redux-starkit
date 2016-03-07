@@ -3,7 +3,7 @@
  */
 'use strict';
 import React, { Component, PropTypes } from 'react';
-
+import { VisibilityFilters } from '../constants/actionType';
 export default class Footer extends Component {
     renderFilter(filter, name) {
         if (filter === this.props.filter) {
@@ -25,11 +25,11 @@ export default class Footer extends Component {
             <p>
                 Show:
                 {' '}
-                {this.renderFilter('SHOW_ALL', 'All')}
+                {this.renderFilter(VisibilityFilters.SHOW_ALL, 'All')}
                 {', '}
-                {this.renderFilter('SHOW_COMPLETED', 'Completed')}
+                {this.renderFilter(VisibilityFilters.SHOW_COMPLETED, 'Completed')}
                 {', '}
-                {this.renderFilter('SHOW_ACTIVE', 'Active')}
+                {this.renderFilter(VisibilityFilters.SHOW_ACTIVE, 'Active')}
                 .
             </p>
         );

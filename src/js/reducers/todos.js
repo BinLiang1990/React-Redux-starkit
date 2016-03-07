@@ -2,7 +2,7 @@
  * Created by EdenLiang on 2016/3/4.
  */
 'use strict';
-import { ADD_TODO, COMPLETE_TODO, SET_VISIBILITY_FILTER, VisibilityFilters } from '../constants/actionType';
+import { ADD_TODO, COMPLETE_TODO } from '../constants/actionType';
 const todos = (state = [], action) => {
     switch (action.type) {
         case ADD_TODO:

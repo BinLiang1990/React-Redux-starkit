@@ -16,7 +16,7 @@ module.exports = {
         './src/app.js'
     ],
     output: {
-        path: path.join(__dirname, 'dist'),
+        path: path.join(__dirname, 'static'),
         filename: 'bundle.js',
         publicPath: '/static/'
     },
@@ -35,9 +35,9 @@ module.exports = {
         })
     ],
     module: {
-        preLoaders: [
-            {test: [/\.js$/, /\.jsx$/], loader: "eslint-loader", exclude: /node_modules/}
-        ],
+        //preLoaders: [
+        //    {test: [/\.js$/, /\.jsx$/], loader: "eslint-loader", exclude: /node_modules/}
+        //],
         loaders: [
             {test: /\.jsx?$/, loader: "babel-loader", exclude: /node_modules/}
         ]
