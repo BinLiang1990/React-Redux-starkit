@@ -4,6 +4,7 @@
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
 var config = require('./webpack.config');
+var open = require('open');
 //config.entry.app.unshift("webpack-dev-server/client?http://192.168.4.110:3001", "webpack/hot/dev-server");
 
 new WebpackDevServer(webpack(config), {
@@ -21,5 +22,6 @@ new WebpackDevServer(webpack(config), {
     stats: {colors: true}
 }).listen(3001, function (err, result) {
     if (err) console.log(err);
+    open('http://localhost:3001');
     console.log('Listening at localhost:3001');
 });
