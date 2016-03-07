@@ -13,7 +13,7 @@ module.exports = {
         reasons: false
     },
     entry: [
-        './src/app.js'
+        './src/index.js'
     ],
     output: {
         path: path.join(__dirname, 'static'),
