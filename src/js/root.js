@@ -5,14 +5,14 @@
 import React, { PropTypes } from 'react';
 import { Router, Route,browserHistory } from 'react-router';
 import { Provider } from 'react-redux';
-import configureStore from './store/configureStore';
-
+import ConfigureStore from './store/configureStore';
+import DevTools from './containers/devTools';
 import Home from './containers/home';
 import BaseInfo from './containers/baseInfo';
 import Menu from './containers/menu';
 import LeftBar from './containers/leftbar';
 
-const store = configureStore();
+const store = ConfigureStore();
 
 const App = (props) => {
     return (
@@ -36,6 +36,7 @@ const Root = () => {
                     </Route>
                 </Router>
             </Provider>
+            <DevTools store={store} />
         </div>
     );
 };

@@ -13,7 +13,7 @@ new WebpackDevServer(webpack(config), {
     historyApiFallback: true,
     quiet: false,
     noInfo: false,
-    filename: "app.js",
+    filename: "index.js",
     watchOptions: {
         aggregateTimeout: 300,
         poll: 1000

@@ -1,7 +1,6 @@
 /**
  * Created by EdenLiang on 2016/1/20.
  */
-//require('core-js/fn/object/assign');
 import 'core-js/fn/object/assign'
 import React from 'react';
 import ReactDOM from 'react-dom';
