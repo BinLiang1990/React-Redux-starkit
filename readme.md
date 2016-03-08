@@ -1,6 +1,4 @@
 ### Installation
 
-npm install 
+npm install  
 npm start
-
-view localhost:3001
