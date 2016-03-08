@@ -15,7 +15,8 @@ import DevTools from '../containers/devTools';
 //export default function configureStore(initialState) {
 //    return createStoreWithMiddleware(rootReducer, initialState);
 //}
-const enhancer = compose(
+
+const createStoreWithMiddleware = compose(
     applyMiddleware(thunkMiddleware),
     DevTools.instrument(),
     persistState(
@@ -23,9 +24,24 @@ const enhancer = compose(
             /[?&]debug_session=([^&#]+)\b/
         )
     )
-);
+)(createStore);
 
 export default function configureStore(initialState) {
-    const store = createStore(rootReducer, initialState, enhancer);
-    return store;
+    return createStoreWithMiddleware(rootReducer, initialState);
 }
+
+
+//const enhancer = compose(
+//    applyMiddleware(thunkMiddleware),
+//    DevTools.instrument(),
+//    persistState(
+//        window.location.href.match(
+//            /[?&]debug_session=([^&#]+)\b/
+//        )
+//    )
+//);
+//
+//export default function configureStore(initialState) {
+//    const store = createStore(rootReducer, initialState, enhancer);
+//    return store;
+//}

@@ -4,7 +4,7 @@
 import 'core-js/fn/object/assign'
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Root from './root';
+import Root from './containers/root';
 //import { createStore } from 'redux'
 //import { Provider } from 'react-redux';
 //import index from './js/reducers/index';
