@@ -12,7 +12,8 @@
     "react",
     "webpack",
     "redux",
-    "es6"
+    "es6",
+    "redux-devtools"
   ],
   "author": "eden liang",
   "license": "ISC",
