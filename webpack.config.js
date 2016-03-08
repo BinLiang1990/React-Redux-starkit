@@ -9,7 +9,7 @@ module.exports = {
     devtool: "eval",
     entry: {
         app: [
-            "webpack-dev-server/client?http://192.168.4.110:3001",
+            "webpack-dev-server/client?http://localhost:3001",
             "webpack/hot/dev-server",
             './src/index.js'
         ]
