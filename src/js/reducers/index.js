@@ -3,15 +3,20 @@
  */
 'use strict';
 import { combineReducers } from 'redux'
-
+import { postRequest,postSuccess } from '../actions/test';
 
 const rootReducer = combineReducers({
-    counter
+    Test
 })
 
 export default rootReducer
-function counter(state = 0, action) {
+
+function Test(state = {isFetching: false, items: []}, action) {
     switch (action.type) {
+        case 'postRequest':
+            return Object.assign(({}, state, {isFetching: true}));
+        case 'postSuccess':
+            return Object.assign(({}, state, {isFetching: false,items:action}));
         default:
             return state
     }
