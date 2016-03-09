@@ -11,6 +11,7 @@ const LeftBar = () => {
             <li><Link to="/">home</Link></li>
             <li><Link to="/baseinfo">baseinfo</Link></li>
             <li><Link to="/menu">menu</Link></li>
+            <li><Link to="/test">test</Link></li>
         </ul>
     </div>)
 }
