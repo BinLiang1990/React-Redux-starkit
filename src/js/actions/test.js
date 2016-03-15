@@ -22,7 +22,7 @@ export function fetchPosts() {
     return (dispatch, getState) => {
         return dispatch(()=> {
             dispatch(postRequest());
-            return fetch('http://192.168.4.110:1505/user/list')
+            return fetch('http://121.42.165.52:1505/user/list')
                 .then(response => response.json())
                 .then(json => dispatch(receivePost(json)))
         })
